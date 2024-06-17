@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm install && npmm install --prefix frontend && npm run build ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

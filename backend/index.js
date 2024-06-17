@@ -4,9 +4,29 @@ require("./db/config")
 const User  = require("./db/User");
 const Product = require("./db/Products")
 const app = express();
+const path = require("path");
+
 
 app.use(express.json())
 app.use(cors());
+
+// --------------------------deployment------------------------------
+
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "/frontend/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
+
+// --------------------------deployment------------------------------
 
 // post request for register
 app.post("/register",async (req,resp) => {  //async function use krtay hai promise return krne k liye
