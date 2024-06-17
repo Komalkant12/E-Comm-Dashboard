@@ -27,6 +27,7 @@ function App() {
 
       <Route path="/signUp" element={<SignUp/>}/>
       <Route path="/login" element={<Login/>}/>
+      
       </Routes>
     </BrowserRouter>
     <Footer/>

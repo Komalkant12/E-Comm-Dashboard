@@ -35,8 +35,14 @@ const Login = () => {
     } 
 
         return (
+          <div>
+            <h3>credential :- type or copy paste the given email & password</h3>
+            <h4>Email :- admin@gmail.com</h4>
+            <h4>password :- 012345</h4>
+
     <div className="login">
-     
+      
+
       <h2>LOGIN</h2>
       <form action="#" method="post" />
 
@@ -45,8 +51,9 @@ const Login = () => {
 
      <input type="password" className="password" value={password} 
         onChange={(e) => setPassword(e.target.value)} placeholder="Enter Password" required/>
-
+   <br></br>
       <button onClick={handleLogin} className="appButton" type="button">Login</button>
+    </div>
     </div>
   );
 };

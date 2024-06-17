@@ -36,6 +36,8 @@ const SingUp = () => {
    };
 
   return (
+    <div>
+      <h3>please go to the login page</h3>
     <div className="signup">
       <h1>REGISTER</h1>
       <input
@@ -63,7 +65,7 @@ const SingUp = () => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Enter Password"
         required
-      />
+      /> <br></br>
 
       <button onClick={collectData} type="submit">
         Sign Up
@@ -75,6 +77,7 @@ const SingUp = () => {
        LOGIN
        </Link>
       </p>
+    </div>
     </div>
   );
 };
